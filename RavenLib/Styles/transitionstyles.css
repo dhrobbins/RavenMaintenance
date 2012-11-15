@@ -1,0 +1,238 @@
+.ko_container {
+    width: 125px;
+    min-height: 100px;
+    background-color: #AAA;
+	box-shadow: 2px 2px 2px #292929;
+}
+
+.high {
+    background-color: red;
+}
+
+.trash {
+    background-color: #000;
+}
+
+.item {
+    background-color: #DDD;
+    border-style: solid;
+    cursor: move;
+	height: 28px;
+	margin: 4px;	
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.item input {
+    /*height: 28px;*/
+	width: 100px;
+}
+
+.bottomBorder{
+	background-color: #BFD255;
+	box-shadow: 2px 2px 2px #292929;
+	bottom-color: #CCCCCC;
+	bottom-style: solid;
+	bottom-width: 1px;
+	margin-bottom: 12px;
+	padding-bottom: 8px;
+	padding-left: 4px;
+}
+
+.stateTriggerDisplay {
+	padding: 4px;
+    margin: 4px;
+	background: #F5F5F5;
+	
+	
+}
+
+span.selectedApprovaFlow{
+    font-style: italic;  
+}
+
+.stateDisplay{
+	padding: 4px;
+    margin: 4px;
+	
+	background: #4096ee; /* Old browsers */
+}
+
+.triggerDisplay {
+	padding: 4px;
+    margin: 4px;
+	
+	background: #bfd255; /* Old browsers */
+}
+
+.transition {
+    float: left;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.transition span {
+    font-size: .75em;
+}
+
+.transitionList {
+    background-color: #F5F5F5;
+    border: 3px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #292929;
+    height: 300px;
+    margin: 5px;
+    padding: 2px;
+    width: 145px;
+}
+
+.transitionItem{
+    /*background-color: #444444;*/
+    border-radius: 3px 3px 3px 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #AAAAAA;	
+    color: black;
+    cursor: move;
+    margin: 2px;
+    overflow: hidden;
+    padding: 1px;
+    text-align: left;
+    white-space: nowrap;
+    width: 140px;
+}
+
+.stateBackground{
+	background-color: #4096ee;
+}
+
+.triggerBackground{
+	background-color: #bfd255;
+}
+
+.transitionItem span{
+	font-size: 1 em;
+	margin: 6px;
+}
+
+span.stateText{
+    font-size: 10px;
+    margin: 6px;
+}
+
+.stateFilterDisplay{
+	background-color: #EEEEEE;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 2px #292929;
+	margin-top: 4px;
+	padding: 8px;
+	
+}
+
+.stateFilterGroup{
+	margin: 4px;
+	padding: 4px;
+}
+
+img.smallicon {
+   width: 10px;
+   height: 10px;
+}
+
+.formFields{
+	float: left;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.formFieldList{
+	background-color: #F5F5F5;
+    border: 3px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #292929;
+    height: 300px;
+    margin: 5px;
+	margin-left: 20px; 
+    padding: 2px;
+	width: 600px;
+	
+}
+
+.formFieldItem{
+	background-color: #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #AAAAAA;	
+    color: #000000;
+    cursor: move;
+    margin: 2px;
+    padding: 1px;
+    text-align: left;    
+}
+
+.formFieldItem input{
+    height: 28px;
+	width: 200px;
+}
+
+.formFieldItem a{
+	border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+	height: 28px;
+	width: 200px;
+}
+
+i {
+	cursor: hand;
+}
+
+/*
+ * 	DataTables
+ */
+
+div.dataTables_length label {
+	float: left;
+	text-align: left;
+}
+
+div.dataTables_length select {
+	width: 75px;
+}
+
+div.dataTables_filter label {
+	float: right;
+}
+
+div.dataTables_info {
+	padding-top: 8px;
+}
+
+div.dataTables_paginate {
+	float: right;
+	margin: 0;
+}
+
+table.table {
+	clear: both;
+	margin-bottom: 6px !important;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+table.table thead .sorting { background: url('Img/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('Img/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('Img/sort_desc.png') no-repeat center right; }
+
+table.table thead .sorting_asc_disabled { background: url('mg/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('Img/sort_desc_disabled.png') no-repeat center right; }
+
+table.dataTable th:active {
+	outline: none;
+}

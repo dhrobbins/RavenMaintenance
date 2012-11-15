@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>RavenDB Query Tool</title>
+        <link type="text/css" rel="Stylesheet" href="../../Styles/bootstrap.min.css" />
+        <link type="text/css" rel="Stylesheet" href="../../Styles/transitionstyles.css" />
+        <style type="text/css">
+            div.main
+            {
+                margin-top: 60px;    
+            }
+        </style>
+	</head>
+	<body>
+	    <div class="container">
+            <div class="span1">&nbsp;</div>
+            <div class="span10">
+                <div class="well main">
+                    <table id="metaDocDataTable" class="table table-striped table-bordered dataTable">
+                        <thead>
+						    <tr>
+							    <th>Doc Type</th>
+							    <th>Id</th>
+							    <th>Last Modified</th>
+						    </tr>
+					    </thead>
+					    <tbody>		
+					    </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="span1"></div>
+        </div>
+        
+        <!-- MetaDoc Modal -->
+        <div class="modal fade" id="metaDocModal" style="display: none;">
+		    <div class="modal-header">
+			    <a class="close" data-dismiss="modal">x</a>
+			    <h3>Document Type <span xdata-bind="text: $root.selectedStep().name()"></span></h3>
+		    </div>
+		    <div class="modal-body">
+		    	data goes here
+		    </div>
+		    <div class="modal-footer">
+			    <div class="btn-toolbar">
+					<div class="btn-group">
+						<a href="#" class="btn btn-primary" data-bind="click: $root.closeMetaDocModal">Close</a>
+					</div>
+				</div>
+		    </div>
+	    </div>
+
+        <script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap-tab.js"></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap-modal.js"></script>
+        <script type="text/javascript" src="../../Scripts/knockout-2.0.0.js"></script>
+        <script type="text/javascript" src="../../Scripts/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../../Scripts/DT_bootstrap.js"></script>
+        <script type="text/javascript" src="../../Scripts/QueryTool.js"></script>
+	</body>
+</html>

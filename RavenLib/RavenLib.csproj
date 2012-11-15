@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FE84A5E-8AD2-459E-B9C3-6C656BD601D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RavenLib</RootNamespace>
+    <AssemblyName>RavenLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSScriptLibrary">
+      <HintPath>..\packages\CS-Script.3.2.5.1\lib\net40\CSScriptLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.0.12.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Production\ApprovaFlow\Production-ApprovaFlow\ApprovaFlow\ReferenceLibraries\OldJson\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\Production\ApprovaFlow\Production-ApprovaFlow\ApprovaFlowWeb\ReferenceLibraries\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Production\ApprovaFlow\Production-ApprovaFlow\ApprovaFlow\ReferenceLibraries\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Authorization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Production\ApprovaFlow\Production-ApprovaFlow\ApprovaFlow\ReferenceLibraries\Raven.Client.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Production\ApprovaFlow\Production-ApprovaFlow\ApprovaFlow\ReferenceLibraries\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Conventions.cs" />
+    <Compile Include="Data\AllDocsByTypeIndex.cs" />
+    <Compile Include="Data\MetaDocument.cs" />
+    <Compile Include="Data\RavenSessionProvider.cs" />
+    <Compile Include="NewBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryDocsModule.cs" />
+    <Compile Include="RavenAwareModuleBuilder.cs" />
+    <Compile Include="RavenModuleBase.cs" />
+    <Compile Include="ScriptingModule.cs" />
+    <Compile Include="Scripting\IScript.cs" />
+    <Compile Include="Scripting\ScriptProcessor.cs" />
+    <Compile Include="Utils\Enforce.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\back_disabled.jpg" />
+    <Content Include="Img\back_enabled.jpg" />
+    <Content Include="Img\collapsibleGroups.html" />
+    <Content Include="Img\forward_disabled.jpg" />
+    <Content Include="Img\forward_enabled.jpg" />
+    <Content Include="Img\glyphicons-halflings-white.png" />
+    <Content Include="Img\glyphicons-halflings.png" />
+    <Content Include="Img\glyphicons_006_user_add.png" />
+    <Content Include="Img\glyphicons_007_user_remove.png" />
+    <Content Include="Img\glyphicons_010_envelope.png" />
+    <Content Include="Img\glyphicons_024_parents.png" />
+    <Content Include="Img\glyphicons_043_group.png" />
+    <Content Include="Img\glyphicons_139_phone.png" />
+    <Content Include="Img\glyphicons_150_check.png" />
+    <Content Include="Img\glyphicons_151_edit.png" />
+    <Content Include="Img\glyphicons_198_ok.png" />
+    <Content Include="Img\glyphicons_199_ban.png" />
+    <Content Include="Img\glyphicons_206_ok_2.png" />
+    <Content Include="Img\glyphicons_308_bomb.png" />
+    <Content Include="Img\glyphicons_335_pin_classic.png" />
+    <Content Include="Img\minus.jpg" />
+    <Content Include="Img\plus.jpg" />
+    <Content Include="Img\sort_asc.png" />
+    <Content Include="Img\sort_asc_disabled.png" />
+    <Content Include="Img\sort_both.png" />
+    <Content Include="Img\sort_desc.png" />
+    <Content Include="Img\sort_desc_disabled.png" />
+    <Content Include="Scripts\bootstrap-modal.js" />
+    <Content Include="Scripts\bootstrap-tab.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DT_bootstrap.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\Scripting.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\knockout-2.0.0.js" />
+    <Content Include="Scripts\QueryTool.js" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\Img\back_disabled.jpg" />
+    <Content Include="Styles\Img\back_enabled.jpg" />
+    <Content Include="Styles\Img\forward_disabled.jpg" />
+    <Content Include="Styles\Img\forward_enabled.jpg" />
+    <Content Include="Styles\Img\minus.jpg" />
+    <Content Include="Styles\Img\plus.jpg" />
+    <Content Include="Styles\Img\sort_asc.png" />
+    <Content Include="Styles\Img\sort_asc_disabled.png" />
+    <Content Include="Styles\Img\sort_both.png" />
+    <Content Include="Styles\Img\sort_desc.png" />
+    <Content Include="Styles\Img\sort_desc_disabled.png" />
+    <Content Include="Styles\transitionstyles.css" />
+    <Content Include="Views\Scripting.htm" />
+    <Content Include="Views\QueryTool.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
